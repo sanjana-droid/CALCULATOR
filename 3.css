@@ -1,0 +1,99 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    font-weight: normal;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #00AAFF, #00FF6C);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.calculator {
+    background-color: #222;
+    border-radius: 10px;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.7);
+    width: 350px;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: minmax(100px, auto) repeat(5, 70px);
+    gap: 1px;
+    padding: 15px;
+}
+
+.display {
+    grid-column: 1 / -1;
+    background-color: rgba(0, 0, 0, 0.75);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-around;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    text-align: right;
+}
+
+.previous-operand {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 1.5rem;
+    min-height: 30px;
+}
+
+.current-operand {
+    color: white;
+    font-size: 2.5rem;
+}
+
+button {
+    cursor: pointer;
+    font-size: 1.5rem;
+    border: none;
+    outline: none;
+    background-color: #333;
+    color: white;
+    border-radius: 5px;
+    margin: 2px;
+    transition: 0.2s background-color;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+.operator, .equals {
+    background-color: #FF9500;
+}
+
+.operator:hover, .equals:hover {
+    background-color: #FFB04D;
+}
+
+#clear, #delete {
+    background-color: #A5A5A5;
+    color: black;
+}
+
+#clear:hover, #delete:hover {
+    background-color: #C8C8C8;
+}
+
+.span-two {
+    grid-column: span 2;
+}
+
+#percent {
+    background-color: #3498db;
+}
+
+#percent:hover {
+    background-color: #5dade2;
+}
